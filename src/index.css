@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* -------------------- */
+
+/* .myContainer{
+border: 2px solid #000;
+margin: 10px !important;
+margin-top: 150px !important;
+margin-left: 100px !important;
+margin-right: 100px !important;
+border-radius: 15px !important;
+} */
+
+.listGroup li {
+  margin-bottom: 10px; 
+  text-align: start;
+  background-color: #d9fae5;
+  padding: 10px;
+  margin-right: 300px !important;
+  border-radius: 10px;
+  margin-left: 300px !important;
+}
+
+.myGroup{
+  border: 1px solid blue !important;
+  padding: 3px;
+  border-radius: 8px;
+  background-color: #ffeed9;
+  margin-right: 5px !important;
+}
+
+.heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputcenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px; 
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+}
+
+.delete{
+  height: 35px;
+  margin: 5px;
+  background-color: rgb(224, 15, 15);
+}
+
+.showstatus{
+  background-color: rgb(14, 186, 14);
+}
+
+.todoGroup{
+  border: 2px solid blue !important;
+  padding: 7px;
+  border-radius: 8px;
+  background-color: #ffeed9;
+  margin-right: 5px !important;
+}
+
+input{
+  height: 30px;
+  border-radius: 8px;
+}
+
+
+.error-container {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+}
+
+.error-message {
+  color: #f0584d;
+  margin-top: 10px;
+  font-size: 20px;
+  border: none !important;
+  padding: 4px;
+  border: 5px;
+}
+h1{
+  border: 1px solid #000;
+  color: white !important;
+  background-color: #007BFF;
+}
