@@ -57,15 +57,14 @@ You need to have Node.js and npm installed on your machine. This project was boo
    https://github.com/codeswithadarsh/Sita-Coding.git
    cd TodoListApp
 
-2. **Install dependencies**:
+2. **Install dependencies and Run**:
 
 ```bash
-    npm install
-
-3. **Run the application**:
-
-```bash
+npm install
 npm start
 
 This runs the app in development mode. Open http://localhost:3000 to view it in the browser.
+
+Also, we can run tests by using Commands:
+npm test
 
