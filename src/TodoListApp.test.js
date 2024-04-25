@@ -3,7 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import TodoListApp from './TodoListApp';
 import '@testing-library/jest-dom';
 
-// Mocking global.fetch
+
 global.fetch = jest.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve({ completed: true })
@@ -22,28 +22,28 @@ test('renders without errors', () => {
 test('adds a new group', () => {
   render(<TodoListApp />);
   fireEvent.click(screen.getByText(/Add Group/i));
-  expect(screen.getAllByText(/Delete/i).length).toBe(2); // Assuming one group is already present initially
+  expect(screen.getAllByText(/Delete/i).length).toBe(2); 
 });
 
 test('deletes a group', () => {
   render(<TodoListApp />);
   fireEvent.click(screen.getByText(/Add Group/i));
-  fireEvent.click(screen.getAllByText(/Delete/i)[1]); // Deletes the newly added second group
+  fireEvent.click(screen.getAllByText(/Delete/i)[1]); 
   expect(screen.getAllByText(/Delete/i).length).toBe(1);
 });
 
 test('validates group input changes', () => {
   render(<TodoListApp />);
   const fromInput = screen.getByDisplayValue(1);
-  fireEvent.change(fromInput, { target: { value: '0' } }); // Invalid input, less than 1
+  fireEvent.change(fromInput, { target: { value: '0' } });
   fireEvent.blur(fromInput);
-  expect(fromInput.value).toBe('1'); // Expect no change due to validation
+  expect(fromInput.value).toBe('1'); 
 });
 
 test('shows status after fetching data', async () => {
   render(<TodoListApp />);
   fireEvent.click(screen.getByText(/Show Status/i));
-  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(10)); // 10 fetch calls for 10 items
-  expect(screen.getByText(/True, /i)).toBeInTheDocument(); // Check if "True" from fetched data is rendered
+  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(10)); 
+  expect(screen.getByText(/True, /i)).toBeInTheDocument(); 
 });
 

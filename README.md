@@ -2,6 +2,9 @@
 
 `TodoListApp` is a React-based web application designed to help users manage their to-do lists effectively by grouping items and viewing their completion status. The application enables users to dynamically group their tasks and check the status of each item via an API.
 
+### Deployed Link:
+https://sita-coding.vercel.app/
+
 ## Features
 
 - **Create Todo Groups**: Users can define groups to categorize their to-do items based on their preferences or priorities.
